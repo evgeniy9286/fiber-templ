@@ -23,7 +23,7 @@ func NewHandler(router fiber.Router) {
 }
 
 func (h *HomeHandler) home(c *fiber.Ctx) error {
-	component := views.Main("Vasia")
+	component := views.Main()
 	return tadapter.Render(c, component)
 } 
 
