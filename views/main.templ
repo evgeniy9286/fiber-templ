@@ -1,5 +1,11 @@
 package views
 
+import "fiber-templ-learn/views/components"
+
 templ Main() {
-	<main>Main</main>
+	<main>
+		@components.Title("Hello!")
+		@components.Title("Heeeellleee")
+		Main
+	</main>
 }
