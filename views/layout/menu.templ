@@ -1,0 +1,25 @@
+package layout
+
+import "fiber-templ-learn/views/components"
+
+templ Menu() {
+	<style>
+.layout-menu,.layout-menu-logo{display:-webkit-box;display:-ms-flexbox}.layout-menu-logo span,.layout-menu-right-link{color:var(--color-white)}.layout-menu{display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;width:1200px;margin:0 auto}.layout-menu-logo{display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;gap:10px}.layout-menu-right{display:-webkit-box;display:-ms-flexbox;display:flex;gap:20px}.layout-menu-right-link{font-size:16px}.layout-menu-right-link:hover{color:#9f9f9f}
+</style>
+	<div class="layout-menu">
+		<div class="layout-menu-logo">
+			<img src="public/images/logo.svg" alt="logo" width="26" height="26"/>
+			<span>Logo</span>
+		</div>
+		<div class="layout-menu-right">
+			<div class="layout-menu-right-link-wrap">
+				<a class="layout-menu-right-link" href="/">Войти</a>
+			</div>
+			<div class="layout-menu-right-button">
+				@components.LinkButton("/") {
+					<span>Зарегистрироваться</span>
+				}
+			</div>
+		</div>
+	</div>
+}

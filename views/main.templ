@@ -1,11 +1,22 @@
 package views
 
 import "fiber-templ-learn/views/components"
+import "fiber-templ-learn/views/layout"
+import "fiber-templ-learn/views/widgets"
 
 templ Main() {
-	<main>
-		@components.Title("Hello!")
-		@components.Title("Heeeellleee")
-		Main
-	</main>
+	@layout.Layout(layout.LayoutProps{
+		Title:       "Найди работу своей мечты",
+		Description: "Сайт по поиску работы",
+	}) {
+		<main>
+			@layout.Header() {
+				@components.Title("Найди работу своей мечты")
+				@components.Subtitle("Простой поиск работы")
+			}
+			<div class="main-submit-form">
+				@widgets.VacancyForm()
+			</div>
+		</main>
+	}
 }

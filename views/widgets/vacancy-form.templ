@@ -1,0 +1,48 @@
+package widgets
+
+import "fiber-templ-learn/views/components"
+
+templ VacancyForm() {
+	<style>
+.widgets-vacancy-form-inputs{width:890px;margin:0 auto 30px;display:-ms-grid;display:grid;-ms-grid-columns:1fr 30px 1fr;grid-template-columns:1fr 1fr;gap:30px}.widgets-vacancy-form-button{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.widgets-vacancy-form-paragraph{color:var(--color-black);font-size:16px;font-weight:400;text-align:center;margin-bottom:60px}.example{display:-ms-grid;display:grid;-webkit-transition:.5s;-o-transition:.5s;transition:.5s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:-webkit-gradient(linear,left top,left bottom,from(white),to(black));background:-o-linear-gradient(top,#fff,#000);background:linear-gradient(to bottom,#fff,#000)}
+	</style>
+	<div class="main-submit-form-container">
+		@components.Title2("Опубликовать вакансию")
+		<p class="widgets-vacancy-form-paragraph">
+			Введите все необходимое для публикации
+		</p>
+		<form>
+			<div class="widgets-vacancy-form-inputs">
+				@components.Input(components.InputProps{
+					Name:        "role",
+					Placeholder: "Должность",
+				})
+				@components.Input(components.InputProps{
+					Name:        "company",
+					Placeholder: "Название компании",
+				})
+				@components.Input(components.InputProps{
+					Name:        "type",
+					Placeholder: "Сфера компании",
+				})
+				@components.Input(components.InputProps{
+					Name:        "salary",
+					Placeholder: "Заработная плата",
+				})
+				@components.Input(components.InputProps{
+					Name:        "location",
+					Placeholder: "Расположение",
+				})
+				@components.Input(components.InputProps{
+					Name:        "email",
+					Placeholder: "Контактный e-mail",
+				})
+			</div>
+			<div class="widgets-vacancy-form-button">
+				@components.SubmitButton() {
+					<span>Отправить</span>
+				}
+			</div>
+		</form>
+	</div>
+}

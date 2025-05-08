@@ -17,6 +17,7 @@ func main() {
 
 	app.Use(recover.New())
 	app.Use(logger.New())
+	app.Static("/public", "./public")
 	
 	app.Get("/metrics", monitor.New())
 

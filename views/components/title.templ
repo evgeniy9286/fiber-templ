@@ -1,5 +1,8 @@
 package components
 
 templ Title(title string) {
-	<h1>{ title }</h1>
+	<style>
+.components-title{font-weight:700;font-size:70px;line-height:80px;text-align:center;color:var(--color-white);margin:50px auto}
+</style>
+	<h1 class="components-title">{ title }</h1>
 }

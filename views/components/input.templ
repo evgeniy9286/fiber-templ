@@ -1,0 +1,17 @@
+package components
+
+type InputProps struct {
+	Placeholder string
+	Name        string
+}
+
+templ Input(props InputProps) {
+	<style>
+.components-input{height:60px;padding:20px;border-radius:20px;background-color:var(--color-white)}.components-input::-webkit-input-placeholder{color:var(--color-gray)}.components-input::-moz-placeholder{color:var(--color-gray)}.components-input:-ms-input-placeholder{color:var(--color-gray)}.components-input::-ms-input-placeholder{color:var(--color-gray)}.components-input::placeholder{color:var(--color-gray)}
+</style>
+	<input
+		class="components-input"
+		placeholder={ props.Placeholder }
+		name={ props.Name }
+	/>
+}
